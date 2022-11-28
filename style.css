@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Libre Franklin', sans-serif;
+    height: 100vh;
+}
+
+body {
+    font-size: 1.5rem;
+    padding: 1.8em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    /* gap: 5em; */
+    height: 100%;
+
+}
+
+/* Typography */
+
+h1 {
+    font-weight: 300;
+    font-size: 2.5rem;
+    color: hsl(0, 0%, 59%);
+    margin-bottom: .7em;
+    margin-top: 2em;
+}
+
+h1 span {
+    font-weight: 700;
+    color: hsl(209, 33%, 12%);
+}
+
+p {
+    color: hsl(209, 33%, 12%);
+}
+
+h1+p {
+    margin-top: 1.2em;
+    font-size: 1.4rem;
+}
+
+main {
+    text-align: center;
+}
+
+.logo img {
+    height: 19px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 2.2em 0 5em 0;
+
+}
+
+form .error-msg {
+    display: none;
+}
+
+form input,
+form button {
+    padding: 1em;
+    border-radius: 2em;
+    font-family: inherit;
+}
+
+form input {
+    margin-bottom: 1em;
+    padding-left: 2.5em;
+    border: 1px solid hsl(223, 100%, 88%);
+}
+
+form button {
+    color: hsl(0, 0%, 100%);
+    border: none;
+    background-color: hsl(223, 87%, 63%);
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0px 5px 5px hsl(223, 100%, 88%);
+}
+
+.dashboard img {
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    /* align-self: flex-end; */
+
+}
+
+footer p {
+    color: hsl(0, 0%, 59%);
+    font-size: 1.3rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: .7em;
+    margin-bottom: 2em;
+}
+
+.social-links a {
+    text-decoration: none;
+    border-radius: 50%;
+    padding: .3em .45em;
+    border: 1px solid hsla(0, 0%, 59%, 0.226);
+    text-align: center;
+    font-size: 16px;
+    color: hsl(223, 87%, 63%);
+    /* display: grid;
+    place-content: center; */
+}
+
+.social-links a:hover {
+    background-color: hsl(223, 87%, 63%);
+    color: hsl(0, 0%, 100%);
+}
+
+.social-links a ion-icon {
+    position: relative;
+}
+
+ion-icon[name="logo-facebook"] {
+    top: .15em;
+}
+
+ion-icon[name="logo-twitter"] {
+    top: .15em;
+    left: .05em;
+}
+
+ion-icon[name="logo-instagram"] {
+    top: .15em;
+    left: .05em;
+}
+
+.attribution {
+    font-size: 11px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* Media queries */
+
+@media screen and (min-width: 800px) {
+    main {
+        width: 700px;
+    }
+
+    form {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    form input {
+        flex: 60%;
+    }
+
+    form button {
+        flex: 30%;
+        padding: .5em;
+    }
+}
