@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+/* General styles */
 html {
     font-size: 10px;
     font-family: 'Libre Franklin', sans-serif;
@@ -51,6 +52,7 @@ main {
     height: 19px;
 }
 
+/* Form */
 form {
     display: flex;
     flex-direction: column;
@@ -59,6 +61,7 @@ form {
     height: 152px;
 }
 
+/* error message */
 .error-msg {
     display: none;
     color: hsl(354, 100%, 66%);
@@ -77,10 +80,15 @@ form button {
 }
 
 form input[type="email"] {
-    padding-left: 2.5em;
+    padding-left: 2.2em;
     border: 1px solid hsl(223, 100%, 88%);
     width: 100%;
-    /* outline: none; */
+}
+
+/* placeholder text */
+::placeholder {
+    color: hsl(223, 100%, 88%);
+    opacity: 1;
 }
 
 /* input[type="email"]:invalid {
@@ -108,9 +116,9 @@ form button:hover {
     top: 3em;
 }
 
+/* footer */
 footer {
     text-align: center;
-    /* align-self: flex-end; */
 }
 
 footer p {
@@ -133,8 +141,6 @@ footer p {
     text-align: center;
     font-size: 16px;
     color: hsl(223, 87%, 63%);
-    /* display: grid;
-    place-content: center; */
 }
 
 .social-links a:hover {
@@ -148,16 +154,17 @@ footer p {
 
 ion-icon[name="logo-facebook"] {
     top: .1em;
+    left: .4px;
 }
 
 ion-icon[name="logo-twitter"] {
-    top: .15em;
-    left: .05em;
+    top: .13em;
+    left: .2px;
 }
 
 ion-icon[name="logo-instagram"] {
     top: .1em;
-    left: .05em;
+
 }
 
 .attribution {
@@ -172,6 +179,7 @@ ion-icon[name="logo-instagram"] {
 
 @media screen and (min-width: 800px) {
 
+    /* general styles */
     body {
         padding-top: 3em;
         padding-bottom: 0;
@@ -196,6 +204,7 @@ ion-icon[name="logo-instagram"] {
         margin-top: .3em;
     }
 
+    /* form */
     form {
         flex-direction: row;
         justify-content: space-between;
@@ -215,6 +224,11 @@ ion-icon[name="logo-instagram"] {
     form input[type="email"] {
         width: 100%;
         padding-left: 1.5em;
+        border-color: hsl(0, 0%, 59%);
+    }
+
+    ::placeholder {
+        color: hsl(0, 0%, 59%);
     }
 
     form button {
