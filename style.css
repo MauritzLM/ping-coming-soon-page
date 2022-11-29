@@ -10,12 +10,11 @@ html {
 
 body {
     font-size: 1.5rem;
-    padding: 1.8em;
+    padding: 5em 1.8em 1.8em 1.8em;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    /* gap: 5em; */
+    justify-content: space-between;
     height: 100%;
 
 }
@@ -27,7 +26,7 @@ h1 {
     font-size: 2.5rem;
     color: hsl(0, 0%, 59%);
     margin-bottom: .7em;
-    margin-top: 2em;
+    margin-top: 1.5em;
 }
 
 h1 span {
@@ -55,14 +54,15 @@ main {
 form {
     display: flex;
     flex-direction: column;
-    margin: 2.2em 0 5em 0;
+    margin-top: 2.2em;
     position: relative;
+    height: 152px;
 }
 
 .error-msg {
     display: none;
     color: hsl(354, 100%, 66%);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-style: italic;
     margin-top: .7em;
     font-weight: 300;
@@ -98,14 +98,19 @@ form button {
     margin-top: 1em;
 }
 
+form button:hover {
+    background-color: hsl(223, 100%, 88%);
+}
+
 .dashboard img {
     width: 100%;
+    position: relative;
+    top: 3em;
 }
 
 footer {
     text-align: center;
     /* align-self: flex-end; */
-
 }
 
 footer p {
@@ -142,7 +147,7 @@ footer p {
 }
 
 ion-icon[name="logo-facebook"] {
-    top: .15em;
+    top: .1em;
 }
 
 ion-icon[name="logo-twitter"] {
@@ -151,7 +156,7 @@ ion-icon[name="logo-twitter"] {
 }
 
 ion-icon[name="logo-instagram"] {
-    top: .15em;
+    top: .1em;
     left: .05em;
 }
 
@@ -166,25 +171,54 @@ ion-icon[name="logo-instagram"] {
 /* Media queries */
 
 @media screen and (min-width: 800px) {
+
+    body {
+        padding-top: 3em;
+        padding-bottom: 0;
+    }
+
     main {
-        width: 700px;
+        width: 600px;
+    }
+
+    .logo img {
+        height: 22px;
+    }
+
+    h1 {
+        font-size: 4rem;
+        margin-top: 1em;
+        margin-bottom: .3em;
+    }
+
+    h1+p {
+        font-size: 1.67rem;
+        margin-top: .3em;
     }
 
     form {
         flex-direction: row;
         justify-content: space-between;
+        height: auto;
+        margin-bottom: 2em;
     }
 
     form .error-msg {
         position: absolute;
+        left: 2em;
     }
 
-    form input {
-        width: 60%;
+    form label {
+        width: 68%;
+    }
+
+    form input[type="email"] {
+        width: 100%;
+        padding-left: 1.5em;
     }
 
     form button {
-
-        padding: .5em;
+        width: 30%;
+        margin: 0;
     }
 }
