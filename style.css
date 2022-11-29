@@ -56,11 +56,16 @@ form {
     display: flex;
     flex-direction: column;
     margin: 2.2em 0 5em 0;
-
+    position: relative;
 }
 
-form .error-msg {
+.error-msg {
     display: none;
+    color: hsl(354, 100%, 66%);
+    font-size: 1.3rem;
+    font-style: italic;
+    margin-top: .7em;
+    font-weight: 300;
 }
 
 form input,
@@ -68,13 +73,20 @@ form button {
     padding: 1em;
     border-radius: 2em;
     font-family: inherit;
+    font-size: 100%;
 }
 
-form input {
-    margin-bottom: 1em;
+form input[type="email"] {
     padding-left: 2.5em;
     border: 1px solid hsl(223, 100%, 88%);
+    width: 100%;
+    /* outline: none; */
 }
+
+/* input[type="email"]:invalid {
+    outline: 2px solid hsl(354, 100%, 66%);
+    border-color: hsl(0, 0%, 100%);
+} */
 
 form button {
     color: hsl(0, 0%, 100%);
@@ -83,6 +95,7 @@ form button {
     font-weight: 600;
     cursor: pointer;
     box-shadow: 0px 5px 5px hsl(223, 100%, 88%);
+    margin-top: 1em;
 }
 
 .dashboard img {
@@ -162,12 +175,16 @@ ion-icon[name="logo-instagram"] {
         justify-content: space-between;
     }
 
+    form .error-msg {
+        position: absolute;
+    }
+
     form input {
-        flex: 60%;
+        width: 60%;
     }
 
     form button {
-        flex: 30%;
+
         padding: .5em;
     }
 }
